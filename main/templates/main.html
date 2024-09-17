@@ -1,3 +1,6 @@
+{% extends 'base.html' %}
+
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,10 +9,40 @@
     <title>MCommerce</title>
 </head>
 <body>
-    <h1>{{MCommerce}}</h1>
-    <p>{{nama_mahasiswa}}</p>
-    <p>{{kelas}}</p>
+    <h1>{{ MCommerce }}</h1>
 
+    <h5>Nama: </h5>
+    <p>{{ nama_mahasiswa }}</p>
 
+    <h5>Kelas: </h5>
+    <p>{{ kelas }}</p>
+
+    {% if not product_entries %}
+    <p>Belum ada data product pada MCommerce.</p>
+    {% else %}
+    <table>
+        <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Description</th>
+        </tr>
+
+        {% comment %} Berikut cara memperlihatkan data product di bawah baris ini {% endcomment %}
+        {% for product_entry in product_entries %}
+        <tr>
+            <td>{{ product_entry.product }}</td>
+            <td>{{ product_entry.price }}</td>
+            <td>{{ product_entry.description }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+
+    <br />
+
+    <a href="{% url 'main:create_product_entry' %}">
+        <button>Add New Product Entry</button>
+    </a>
 </body>
 </html>
+{% endblock content %}
