@@ -53,7 +53,51 @@ pada views.py yang saya punya lalu saya tambahkan function register
 - lalu buat login.html pada templates dan mengisi dengan beberapa kode
 - kemudian menambahkan sedikit perubahan pada function login dan logout
 - lalu menghubungkan productentry dengan user dengan migrate
-   
+Tugas 5 :
+
+1. Urutan prioritas (specificity) dalam CSS menentukan selector mana yang diterapkan jika ada beberapa selector yang mengacu pada elemen yang sama. Urutan prioritas didasarkan pada tingkat spesifikasinya:
+
+Inline Styles: CSS yang diterapkan langsung di atribut elemen HTML, seperti <div style="color: red;">. Ini memiliki prioritas tertinggi.
+
+ID Selectors: Selector dengan #id memiliki prioritas lebih tinggi dibandingkan class atau element selector. Misal: #myID.
+
+Class, Pseudo-Class, Attribute Selectors: Selector yang menggunakan class (.class), pseudo-class (:hover), atau atribut ([type="text"]). Misal: .myClass.
+
+Type (Tag) Selectors: Selector berbasis elemen HTML, seperti h1, p, atau div.
+
+Universal Selectors and Inherited Styles: Selektor yang bersifat umum, seperti * atau style yang diwariskan dari elemen induk.
+
+Jika ada konflik, aturan dengan prioritas lebih tinggi diterapkan. Jika dua selector memiliki specificity yang sama, maka yang ditulis terakhir dalam CSS yang akan diambil.
+
+2. Responsive design adalah pendekatan dalam pengembangan web di mana tampilan aplikasi menyesuaikan diri dengan berbagai ukuran layar atau perangkat, seperti smartphone, tablet, dan desktop. Ini penting karena pengguna mengakses aplikasi dari perangkat yang berbeda-beda
+Contoh:
+Sudah Menerapkan Responsive Design:
+   Twitter: Tampilan feed menyesuaikan ukuran layar, dengan elemen-elemen seperti menu atau kolom samping menghilang atau berpindah.
+Belum Menerapkan Responsive Design
+    Arngren.net: Ini adalah contoh situs web e-commerce yang terkenal karena tampilannya yang berantakan, dengan banyak gambar, teks, dan tautan yang bertumpuk dan tidak teratur di layar kecil.
+
+3. Perbedaan antara Margin, Border, dan Padding
+
+Margin: Jarak antara elemen dan elemen lainnya. Digunakan untuk memberi ruang di luar batas elemen.css 
+
+Border: Garis di sekitar elemen yang memisahkan padding dan margin.css Copy code 
+
+Padding: Jarak antara konten di dalam elemen dan batas elemen.css Copy code 
+
+Margin dan padding mempengaruhi tata letak elemen, tetapi margin berinteraksi dengan elemen luar, sedangkan padding berinteraksi dengan elemen di dalamnya.
+
+4. Flexbox dan Grid Layout
+
+Flexbox: Digunakan untuk mengatur elemen dalam satu dimensi (baris atau kolom). Cocok untuk tata letak yang lebih sederhana atau dinamis, seperti menyejajarkan elemen atau membagi ruang di antara elemen.
+
+Grid Layout: Digunakan untuk mengatur elemen dalam dua dimensi (baris dan kolom). Berguna untuk tata letak yang lebih kompleks, seperti membangun grid di seluruh halaman.
+
+5. Cara saya menyelesaikan checklist checklist 
+- Pertama saya membuat fungsi edit product yang dapat mengedit nama, harga, dan deskripsi dari produk yang sudah dimasukkan
+- Lalu saya membuat navigation bar yang responsive dan menyesuaikan dengan perangkat yang digunakan untuk mengakses web saya
+- Lalu, saya mendesign login page dan register page
+- Lalu, saya mendesign home dan card berisi product berdasarkan yang sudah diajarkan
+
 
 
    
