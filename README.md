@@ -97,7 +97,25 @@ Grid Layout: Digunakan untuk mengatur elemen dalam dua dimensi (baris dan kolom)
 - Lalu saya membuat navigation bar yang responsive dan menyesuaikan dengan perangkat yang digunakan untuk mengakses web saya
 - Lalu, saya mendesign login page dan register page
 - Lalu, saya mendesign home dan card berisi product berdasarkan yang sudah diajarkan
+Tugas 6 :
 
+1. Manfaat Penggunaan JavaScript dalam Pengembangan Aplikasi Web:
+* Interaktivitas: JavaScript memungkinkan pengguna untuk berinteraksi langsung dengan halaman web tanpa harus merefresh atau memuat ulang halaman. Misalnya, pengguna dapat menekan tombol untuk memunculkan popup atau menjalankan animasi.
+* Pengelolaan DOM: JavaScript memungkinkan manipulasi langsung elemen HTML (DOM) untuk mengubah konten, struktur, atau gaya halaman secara dinamis.
+* Asynchronous Processing: Dengan JavaScript, kita dapat melakukan operasi asinkron seperti mengambil data dari server menggunakan AJAX, sehingga tidak mengganggu interaksi pengguna di halaman web.
+* Validasi Form: JavaScript bisa digunakan untuk memvalidasi input pengguna di sisi frontend sebelum dikirim ke server, menghemat waktu dan sumber daya.
+* Pengalaman Pengguna yang Lebih Baik: Penggunaan JavaScript dapat meningkatkan pengalaman pengguna dengan memberikan feedback yang cepat dan responsif (misalnya melalui loading indikator saat mengambil data).
+
+2. Fungsi await pada Fetch: await digunakan untuk menunggu penyelesaian (resolved) dari Promise yang dihasilkan oleh fetch() sebelum melanjutkan eksekusi kode berikutnya. fetch() adalah operasi asinkron yang mengembalikan Promise, yang berarti hasilnya mungkin belum tersedia langsung setelah pemanggilan.
+
+3. Alasan Penggunaan csrf_exempt pada View AJAX POST: csrf_exempt digunakan untuk menonaktifkan proteksi CSRF (Cross-Site Request Forgery) pada view tertentu, seperti view yang menerima request AJAX POST. Secara default, Django memproteksi view dari serangan CSRF dengan memerlukan token CSRF untuk setiap request POST. Namun, dalam kasus AJAX, terutama ketika request dilakukan dari klien yang tidak menyediakan token CSRF, kita perlu menonaktifkan validasi tersebut. Penggunaan yang hati-hati: Menggunakan csrf_exempt bisa mengurangi keamanan aplikasi, jadi penggunaannya harus dibatasi hanya pada view yang sangat diperlukan, dan pastikan metode lain diterapkan untuk mengamankan aplikasi.
+  
+4. Alasan Pembersihan Data Input di Backend: Pembersihan data di backend tetap diperlukan karena:
+* Keamanan: Validasi di frontend dapat dengan mudah diabaikan oleh pengguna yang mengakses API secara langsung, atau yang memanipulasi data menggunakan alat seperti Postman atau DevTools browser. Validasi di backend melindungi sistem dari data yang berbahaya seperti input yang mengandung script (XSS) atau SQL injection.
+* Konsistensi: Validasi dan pembersihan di backend memastikan data yang masuk ke dalam sistem selalu berada dalam format yang benar, terlepas dari apakah pengguna mematuhi validasi di frontend atau tidak.
+* Kontrol yang lebih mendalam: Backend memiliki kontrol penuh terhadap bagaimana data diproses dan disimpan. Pembersihan data di backend memungkinkan pengembang untuk melakukan validasi yang lebih kompleks, yang mungkin sulit atau tidak aman dilakukan di frontend. Jadi, meskipun validasi di frontend berguna untuk memberikan umpan balik cepat kepada pengguna, backend tetap menjadi lapisan perlindungan terakhir.
+
+5. Yang pertama saya menambahkan function untuk menambahkan product dengan AJAX yang diletakkan di views.py, lalu saya tambahkan routing di urls.py agar add product by ajax dapat terakses, kemudian buat beberapa kode di bagian script di main.html agar page dapat refresh secara asinkronus, dan membuat form untuk menambahkan product by ajax
 
 
    
